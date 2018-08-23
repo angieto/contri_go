@@ -16,5 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^', include('apps.main.urls'))
+    url(r'^', include('apps.main.urls')),
+    url(r'^community/', include('apps.community.urls')),
+    url(r'^action/', include('apps.action.urls')),        
+    url(r'^progress/', include('apps.progress.urls'))
 ]
