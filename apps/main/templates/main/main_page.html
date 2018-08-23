@@ -18,14 +18,14 @@
                 <li class="active"><a href="#">Community</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Action<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Offer Help</a></li>
-                    <li><a href="#">Request Help</a></li>
+                    <li><a href="{% url 'offer_help' %}">Offer Help</a></li>
+                    <li><a href="{% url 'request_help' %}">Request Help</a></li>
                 </ul>
                 </li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Progress<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">My Records</a></li>
-                    <li><a href="#">Upcoming Schedules</a></li>
+                    <li><a href="{% url 'show_record' %}">My Records</a></li>
+                    <li><a href="{% url 'show_schedule' %}">Upcoming Schedules</a></li>
                 </ul>
             </ul>
             <ul class="nav navbar-nav navbar-right">
