@@ -15,7 +15,7 @@ def create_user(request):
     if len(errors):
         for key, value in errors.items():
             messages.error(request, value)
-        return redirect('index')
+        return redirect('login_page')
     else:
         user_password = bcrypt.hashpw(request.POST['password'].encode('utf8'), bcrypt.gensalt(10))
         user_password = user_password.decode('utf8')
@@ -28,7 +28,7 @@ def login(request):
     if len(errors):
         for key, value in errors.items():
             messages.error(request, value)
-        return redirect('index') 
+        return redirect('login_page') 
     else:   
         user = User.objects.get(email=request.POST['email'])
         request.session['user'] = user.id
