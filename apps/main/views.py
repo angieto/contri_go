@@ -33,10 +33,3 @@ def login(request):
         user = User.objects.get(email=request.POST['email'])
         request.session['user'] = user.id
         return redirect('dashboard')
-
-def logout(request):
-    request.session.clear()
-    return redirect('index')
-
-def dashboard(request):
-    return render(request, 'main/dashboard.html')

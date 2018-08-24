@@ -5,3 +5,7 @@ from .models import *
 
 def dashboard(request):
     return render(request, 'community/dashboard.html')
+
+def logout(request):
+    request.session.clear()
+    return redirect('main_page')
